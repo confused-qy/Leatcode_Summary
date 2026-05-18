@@ -1,11 +1,13 @@
 # 目录
-- [哈希表](#哈希表)
-- [字符串](#字符串)
+- [哈希表(hash table)](#哈希表)
+- [字符串(string)](#字符串)
 - 
 
 
 
 # 哈希表
+**hash table**
+
 创建：
 ``` cpp
 #include <unordered_map>
@@ -63,7 +65,10 @@ mp.at(key)
 // 如果key不存在会直接报错。如果是mp[key]，不存在会自动创建key为0。
 ```
 
+
 # 字符串
+**string**
+
 创建：
 ``` cpp
 #include <string>
