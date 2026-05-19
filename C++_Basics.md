@@ -65,7 +65,6 @@ mp.at(key)
 // 如果key不存在会直接报错。如果是mp[key]，不存在会自动创建key为0。
 ```
 
-
 # 字符串
 **string**
 
@@ -145,4 +144,7 @@ reverse(s.begin(), s.end());
 ``` cpp
 sort(s.begin(), s.end());
 ```
+
+# 动态数组
+**vector**
 
