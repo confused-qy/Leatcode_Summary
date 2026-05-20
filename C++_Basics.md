@@ -1,8 +1,7 @@
 # 目录
 - [哈希表(hash table)](#哈希表)
 - [字符串(string)](#字符串)
-- 
-
+- [动态数组(vector)](#动态数组)
 
 
 # 哈希表
@@ -147,4 +146,91 @@ sort(s.begin(), s.end());
 
 # 动态数组
 **vector**
+
+创建&初始化：
+``` cpp
+vector<int> v;
+vector<int> v(5); //初始化长度，数值默认为0
+vector<int> v(5,7); //初始化长度和数值
+vector<int> v = {1,2,3,4};
+```
+
+长度：
+``` cpp
+v.size();
+```
+
+尾部添加/删除：
+``` cpp
+v.push_back();
+v.pop_back();
+```
+
+访问元素：
+``` cpp
+v[i];
+v.at(i);
+v.front();
+v.back();
+```
+
+修改元素：
+``` cpp
+v[2] = 100;
+```
+
+遍历：
+``` cpp
+// 普通
+for(int i = 0; i < v.size(); i++){cout << v[i];}
+
+// 范围for
+for(int x:v){cout << x;}
+
+// 如果要修改，需要加&
+for(int& x:v){x++;}
+```
+
+清空：
+``` cpp
+v.clear();
+```
+
+判空：
+``` cpp
+if(v.empty());
+```
+
+插入：
+``` cpp
+v.insert(v.begin()+2, 100); // 位置，数值，获得 1 2 100 3 4
+v.insert(v.begin(), 5, 1); // 位置，个数，数值
+```
+
+删除：
+``` cpp
+v.erase(v.begin()+2); // 删除一个
+v.erase(v.begin()+1, v.begin()+4); //删除一些，注意是左闭右开:[1,4)
+```
+
+排序：
+``` cpp
+sort(v.begin(), v.end()); // 升序
+sort(v.begin(), v.end(), greater<int>()); // 降序
+```
+
+反转：
+``` cpp
+reverse(v.begin(), v.end());
+```
+
+查找：
+``` cpp
+auto it = find(v.begin(), v.end(), 5); // 5是target
+if(it != v.end()) {
+	// 说明找到了
+	int position = it - v.begin();
+}
+```
+
 
