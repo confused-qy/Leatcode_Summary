@@ -118,6 +118,11 @@ s.pop_back();
 s.empty();
 ```
 
+清空字符串：
+``` cpp
+s.clear();
+```
+
 取子串：
 ``` cpp
 string s = "abcdef";
@@ -143,6 +148,11 @@ reverse(s.begin(), s.end());
 排序字符串：
 ``` cpp
 sort(s.begin(), s.end());
+```
+
+字符串转数字：
+``` cpp
+int num = stoi(s);
 ```
 
 # 动态数组
@@ -237,7 +247,7 @@ if(it != v.end()) {
 # 常用常数
 **const**
 
-整数范围
+整数范围：
 ``` cpp
 #include <climits>
 
@@ -251,7 +261,7 @@ LLONG_MAX
 LLONG_MIN
 ```
 
-浮点范围
+浮点范围：
 ``` cpp
 #include <cfloat>
 
@@ -262,13 +272,13 @@ FLT_MAX
 FLT_MIN
 ```
 
-无穷大
+无穷大：
 ``` cpp
 const int INF = 1e9;
 const long long INF = 1e18;
 ```
 
-数学常数
+数学常数：
 ``` cpp
 #include <cmath>
 
@@ -276,8 +286,42 @@ M_PI      // π
 M_E       // e
 ```
 
-空指针
+空指针：
 ``` cpp
 nullptr // 不要用NULL
 ```
 
+# 栈
+**stack**
+
+创建：
+``` cpp
+#include <stack>
+
+stack<int> st;
+stack<char> st;
+stack<pair<int,int>> st;
+```
+
+出入栈：
+``` cpp
+st.push(x);
+st.pop();
+```
+
+查看栈顶：
+``` cpp
+x = st.top(); 
+
+// 注意.top()返回的是引用，可以修改例如 st.top += 1;
+```
+
+判空：
+``` cpp
+st.empty();
+```
+
+元素个数：
+``` cpp
+st.size();
+```
