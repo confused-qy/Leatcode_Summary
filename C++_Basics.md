@@ -2,7 +2,8 @@
 - [哈希表(hash table)](#哈希表)
 - [字符串(string)](#字符串)
 - [动态数组(vector)](#动态数组)
-
+- [常用常数](#常用常数)
+- 
 
 # 哈希表
 **hash table**
@@ -233,4 +234,50 @@ if(it != v.end()) {
 }
 ```
 
+# 常用常数
+**const**
+
+整数范围
+``` cpp
+#include <climits>
+
+INT_MAX      // 2147483647
+INT_MIN      // -2147483648
+
+LONG_MAX
+LONG_MIN
+
+LLONG_MAX
+LLONG_MIN
+```
+
+浮点范围
+``` cpp
+#include <cfloat>
+
+DBL_MAX
+DBL_MIN
+
+FLT_MAX
+FLT_MIN
+```
+
+无穷大
+``` cpp
+const int INF = 1e9;
+const long long INF = 1e18;
+```
+
+数学常数
+``` cpp
+#include <cmath>
+
+M_PI      // π
+M_E       // e
+```
+
+空指针
+``` cpp
+nullptr // 不要用NULL
+```
 
