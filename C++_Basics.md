@@ -3,7 +3,7 @@
 - [字符串(string)](#字符串)
 - [动态数组(vector)](#动态数组)
 - [常用常数](#常用常数)
-- 
+- [栈(stack)](#栈)
 
 # 哈希表
 **hash table**
@@ -214,6 +214,7 @@ if(v.empty());
 
 插入：
 ``` cpp
+v.insert(v.begin(), 1); // 往开头插一个数
 v.insert(v.begin()+2, 100); // 位置，数值，获得 1 2 100 3 4
 v.insert(v.begin(), 5, 1); // 位置，个数，数值
 ```
@@ -306,6 +307,7 @@ stack<pair<int,int>> st;
 出入栈：
 ``` cpp
 st.push(x);
+st.push({3,4});
 st.pop();
 ```
 
