@@ -4,6 +4,7 @@
 - [动态数组(vector)](#动态数组)
 - [常用常数](#常用常数)
 - [栈(stack)](#栈)
+- [堆(heap)](#堆)
 
 # 哈希表
 **hash table**
@@ -326,4 +327,58 @@ st.empty();
 元素个数：
 ``` cpp
 st.size();
+```
+
+# 堆
+**heap**
+
+创建大根堆：
+``` cpp
+priority_queue<int> pq; // 堆顶是最大值
+```
+
+创建小根堆：
+``` cpp
+priority_queue<
+	int,
+	vector<int>,
+	greater<int>
+> pq;
+```
+
+加入元素：
+``` cpp
+pq.push(x);
+```
+
+查看堆顶：
+``` cpp
+pq.top();
+```
+
+删除堆顶：
+``` cpp
+pq.pop();
+```
+
+判空：
+``` cpp
+pq.empty();
+```
+
+判断大小：
+``` cpp
+pq.size();
+```
+
+存pair：
+``` cpp
+priority_queue<pair<int,int>> pq; // 先比较第一位，在比较第二位
+pq.push({5,2});
+```
+
+取：
+``` cpp
+pq.top().first
+pq.top().second
 ```
